@@ -38,12 +38,7 @@ inquirer
       type: "list",
       message: "Which type of license should your project have?",
       name: "license",
-      choices: [
-        "Apache License 2.0",
-        "ISC License",
-        "MIT License",
-        "GNU GPLv3",
-      ],
+      choices: ["MIT License", "GNU GPLv2", "Apache License 2.0", "GNU GPLv3"],
     },
     {
       type: "input",
@@ -65,7 +60,7 @@ inquirer
 * [Usage](#usage-information)
 * [Contributors](#contributors)
 * [Testing](#test-instructions)
-* [Contact Information](#contact)
+* [Contact Information](#questions)
 ## Project Description
 ${response.description}
 ## Installation
@@ -76,12 +71,16 @@ ${response.usage}
 ${response.contributors}
 ## Test Instructions
 ${response.tests}
-## Contact
+## Questions
 If you have any questions about this project, feel free to reach me through email or on Github!
 
 Email: ${response.email}
 
-[Github Link](https://github.com/${response.github})`;
+[Link to Github!](https://github.com/${response.github})
+
+## Licensing 
+This project is covered under the ${response.license}
+`;
 
     fs.writeFile("readMe.md", content, (error) => {
       if (error) console.log(error);
