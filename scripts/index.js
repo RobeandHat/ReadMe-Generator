@@ -6,14 +6,14 @@ inquirer
     {
       type: "input",
       message: "What is your project's title?",
-      name: "Title",
+      name: "title",
     },
     {
       type: "input",
       message: "Describe your project",
       name: "description",
     },
-  
+
     {
       type: "input",
       message: "How should your project be installed?",
@@ -26,8 +26,8 @@ inquirer
     },
     {
       type: "input",
-      message: "What credits do you want to include?",
-      name: "credits",
+      message: "List any contributors you would like to credit",
+      name: "contributors",
     },
     {
       type: "input",
@@ -48,13 +48,36 @@ inquirer
     {
       type: "input",
       message: "What is your GitHub username?",
-      name: "questions",
+      name: "github",
     },
     {
       type: "input",
       message: "What is your email address?",
-      name: "contact",
+      name: "email",
     },
   ])
-  .then((response) => {};
-    
+  .then((response) => {
+    const content = `
+# ${response.title}
+## Project Description
+${response.description}
+## Installation
+${response.install}
+## Usage information
+${response.usage}
+## Contributors
+${response.contributors}
+## Test Instructions
+${response.tests}
+## Contact
+If you have any questions about this project, feel free to reach me through email or on Github!
+
+Email: ${response.email}
+
+Github: ${response.github}`;
+
+    fs.writeFileSync("readMe.md", content, (error) => {
+      if (error) console.log(error);
+      else console.log("ReadMe written!");
+    });
+  });
