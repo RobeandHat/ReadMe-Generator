@@ -9,6 +9,7 @@
 - [Usage](#usage-information)
 - [Contributors](#contributors)
 - [Testing](#test-instructions)
+- [Demo-Video](#functionality)
 - [Contact Information](#questions)
 
 ---
