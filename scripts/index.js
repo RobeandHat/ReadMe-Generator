@@ -59,6 +59,13 @@ inquirer
   .then((response) => {
     const content = `
 # ${response.title}
+## Table of Contents
+* [Description](#project-description)
+* [Installation](#installation)
+* [Usage](#usage-information)
+* [Contributors](#contributors)
+* [Testing](#test-instructions)
+* [Contact Information](#contact)
 ## Project Description
 ${response.description}
 ## Installation
