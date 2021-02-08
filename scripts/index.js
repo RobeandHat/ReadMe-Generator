@@ -83,7 +83,7 @@ Email: ${response.email}
 
 Github: ${response.github}`;
 
-    fs.writeFileSync("readMe.md", content, (error) => {
+    fs.writeFile("readMe.md", content, (error) => {
       if (error) console.log(error);
       else console.log("ReadMe written!");
     });
