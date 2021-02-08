@@ -38,7 +38,7 @@ inquirer
       type: "list",
       message: "Which type of license should your project have?",
       name: "license",
-      choices: ["MIT License", "GNU GPLv2", "Apache License 2.0", "GNU GPLv3"],
+      choices: ["MIT", "GPLv2", "Apache", "GPLv3"],
     },
     {
       type: "input",
@@ -54,6 +54,7 @@ inquirer
   .then((response) => {
     const content = `
 # ${response.title}
+![badge](https://img.shields.io/badge/License-${response.license}-brightgreen)
 ## Table of Contents
 * [Description](#project-description)
 * [Installation](#installation)
@@ -61,25 +62,33 @@ inquirer
 * [Contributors](#contributors)
 * [Testing](#test-instructions)
 * [Contact Information](#questions)
+* * *
 ## Project Description
 ${response.description}
+* * *
 ## Installation
 ${response.install}
+* * *
 ## Usage information
 ${response.usage}
+* * *
 ## Contributors
 ${response.contributors}
+* * *
 ## Test Instructions
+
 ${response.tests}
+* * *
 ## Questions
 If you have any questions about this project, feel free to reach me through email or on Github!
 
 Email: ${response.email}
 
 [Link to Github!](https://github.com/${response.github})
+* * *
 
 ## Licensing 
-This project is covered under the ${response.license}
+This project is protected under the ${response.license} license.
 `;
 
     fs.writeFile("readMe.md", content, (error) => {
