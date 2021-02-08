@@ -56,7 +56,7 @@ Email: mttnrdlph@gmail.com
 
 [Full Video!](https://drive.google.com/file/d/1gp_MV2eXCFYMJMLRA5FOkGszLKL8GxDF/view)
 
-![Functionality Gif](readme-functionality.gif)
+![Functionality Gif](assets/readme-functionality.gif)
 ---
 
 ## Licensing
