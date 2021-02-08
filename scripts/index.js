@@ -81,7 +81,7 @@ If you have any questions about this project, feel free to reach me through emai
 
 Email: ${response.email}
 
-Github: ${response.github}`;
+[Github Link](https://github.com/${response.github})`;
 
     fs.writeFile("readMe.md", content, (error) => {
       if (error) console.log(error);
