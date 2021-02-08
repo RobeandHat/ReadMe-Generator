@@ -50,7 +50,13 @@ If you have any questions about this project, feel free to reach me through emai
 Email: mttnrdlph@gmail.com
 
 [Link to Github!](https://github.com/RobeandHat)
+---
 
+## Functionality
+
+[Full Video!](https://drive.google.com/file/d/1gp_MV2eXCFYMJMLRA5FOkGszLKL8GxDF/view)
+
+![Functionality Gif](readme-functionality.gif)
 ---
 
 ## Licensing
